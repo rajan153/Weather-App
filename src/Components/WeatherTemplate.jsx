@@ -1,4 +1,8 @@
 import React from "react";
+import windImg from "../assets/wind.png"
+import humidityImg from "../assets/humidity.png"
+import cloudyImg from "../assets/cloudy.png"
+
 
 function WeatherTemplate({ data }) {
   const src = `https://flagcdn.com/144x108/${data?.sys?.country.toLowerCase()}.png`;
@@ -21,17 +25,17 @@ function WeatherTemplate({ data }) {
         </div>
         <div className="flex mt-16 gap-6 text-white mb-[4.2rem]">
           <div className="w-[220px] flex flex-col items-center bg-white bg-opacity-25 text-white py-6 gap-2">
-            <img src="../src/assets/wind.png" width={70} />
+            <img src={windImg} width={70} />
             <p>WINDSPEED</p>
             <p>{data?.wind?.speed} m/s</p>
           </div>
           <div className="w-[220px] flex flex-col items-center bg-white bg-opacity-25 py-6 gap-2">
-            <img src="../src/assets/humidity.png" width={70} />
+            <img src={humidityImg} width={70} />
             <p>HUMIDITY</p>
             <p>{data?.main?.humidity}%</p>
           </div>
           <div className="w-[220px] flex flex-col items-center bg-white bg-opacity-25 py-6 gap-2">
-            <img src="../src/assets/cloudy.png" width={70} />
+            <img src={cloudyImg} width={70} />
             <p>CLOUDS</p>
             <p>{data?.clouds?.all}%</p>
           </div>

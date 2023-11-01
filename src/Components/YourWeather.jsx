@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useCurrentWeatherInfo } from "../hook/useCurrentWeatherInfo";
 import WeatherTemplate from "./WeatherTemplate";
 
 function YourWeather(props) {
@@ -33,7 +32,7 @@ function YourWeather(props) {
   return (
     <div className="flex flex-col items-center gap-4 mb-[2rem]">
       {loading ? (
-        <h1 className="h-[100vh] text-white text-3xl font-extrabold">
+        <h1 className="min-h-[100vh] text-white text-3xl font-extrabold">
           Loading....
         </h1>
       ) : (
